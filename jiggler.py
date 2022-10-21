@@ -1,8 +1,7 @@
-from random import random
+import random
 import pyautogui as pag
 import os 
 import pandas as pd
-import random
 
 pause = 0.5 # 10秒待機させる？
 
@@ -23,7 +22,6 @@ def main():
   print('やめるときはコマンドプロンプト/ターミナルを閉じるか、\nコマンドプロンプト/ターミナル上でctr + c(windows)/cmd + c(mac) やでー。\n')
   
   
-  i = 5
   while True:
     try:
       pag.moveTo(random.choice(width_range), random.choice(height_range), duration=1) # カーソルをランダムに動かす
@@ -31,9 +29,6 @@ def main():
       print(str(random.choice(df['who'])))
       print()
       pag.sleep(10)
-      i -= 1
-      if i == 0:
-        break
     except:
       print('お仕事頑張ってな！！！ほな！')
       break
